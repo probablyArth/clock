@@ -1,0 +1,81 @@
+button {
+  cursor: pointer;
+  background-color: #1f2544;
+  color: white;
+  padding: 8px;
+  border-radius: 4px;
+  border: 2px solid #1f2544;
+  font-family: monospace;
+}
+button:disabled {
+  cursor: default;
+  opacity: 0.7;
+}
+
+#center-ball {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  top: 147px;
+  left: 147px;
+  background-color: white;
+  border-radius: 200px;
+  z-index: 200;
+}
+
+.hand {
+  height: 4px;
+  background-color: black;
+  position: absolute;
+  transform-origin: left;
+  transform: rotate(-90deg);
+  border-radius: 200px;
+  border: 1px dotted white;
+  top: 150px;
+  left: 150px;
+}
+
+#clock-container {
+  height: 300px;
+  width: 300px;
+  border: 2px black solid;
+  border-radius: 170px;
+  position: relative;
+  color: #1f2544;
+  background-color: #1f2544;
+}
+
+#seconds-hand {
+  width: 110px;
+  background-color: #ffd0ec;
+}
+
+#minutes-hand {
+  width: 130px;
+  background-color: #81689d;
+}
+
+#hours-hand {
+  width: 145px;
+  background: #474f7a;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+@media only screen and (max-width: 400px) {
+  body {
+    flex-direction: column;
+  }
+}
+
+.flex-col {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: full;
+}
