@@ -6,6 +6,7 @@ const Clock: FC<{
   minutesDiff: number;
   secondsDiff: number;
 }> = ({ title, hoursDiff, minutesDiff, secondsDiff }) => {
+  const audio = new Audio("tick.wav");
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
@@ -28,6 +29,7 @@ const Clock: FC<{
   useEffect(() => {
     const clockInterval = setInterval(() => {
       handleDate();
+      audio.play();
     }, 1000);
 
     return () => clearInterval(clockInterval);
